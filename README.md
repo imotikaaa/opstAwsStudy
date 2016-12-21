@@ -22,12 +22,14 @@
 ### eclipseの場合
 
 - project import で多分gradleプロジェクトインポートできる・・・はず・・・
-- 右クリックメニューからgradleの実行タスク「bootrun」を選択し、アプリを実行する。topページが表示されれば設定完了
+    - all in one 4.4(以下プラグイン設定済みの状態で) でgradleプロジェクトインポートで行けたと報告ありました
+- 実行タスク「bootrun」で、アプリを実行する。topページが表示されれば設定完了
     - http://localhost:8080/gallery
+    - 右クリック＞Gradle＞クイックランチャー＞bootrun直打ちして実行
 - all in one 4.5以下の場合、もしくはall in oneを使用していない場合は以下プラグインの設定を行ってください
     - EGit
     - STS(Spring Tool Suite)
-- all in one 4.4以下の場合、もしくはall in oneを使用していない場合は以下ブラグいんの設定を行ってください
+- all in one 4.4以下の場合、もしくはall in oneを使用していない場合は以下ブラグインの設定を行ってください
     - Gradle IDE もしくは Buildship
         
 ### その他共通

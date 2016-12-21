@@ -25,7 +25,7 @@
     - all in one 4.4(以下プラグイン設定済みの状態で) でgradleプロジェクトインポートで行けたと報告ありました
 - 実行タスク「bootrun」で、アプリを実行する。topページが表示されれば設定完了
     - http://localhost:8080/gallery
-    - 右クリック＞Gradle＞クイックランチャー＞bootrun直打ちして実行
+    - 右クリック＞Gradle＞クイックランチャー＞bootrun直打ちして実行
 - all in one 4.5以下の場合、もしくはall in oneを使用していない場合は以下プラグインの設定を行ってください
     - EGit
     - STS(Spring Tool Suite)

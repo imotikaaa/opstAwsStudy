@@ -1,15 +1,13 @@
 package jp.co.opst.cloud.study;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * アプリケーションmainクラス
  * Created by maaya
  */
-@EnableAutoConfiguration
-@ComponentScan
+@SpringBootApplication
 public class App {
 
     public static void main(String[] args) throws Exception {

@@ -3,7 +3,6 @@ package jp.co.opst.cloud.study.controller;
 
 import jp.co.opst.cloud.study.domain.helper.DisplayHostHelper;
 import jp.co.opst.cloud.study.domain.model.dto.Image;
-import jp.co.opst.cloud.study.domain.model.form.FIleUploadForm;
 import jp.co.opst.cloud.study.domain.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -31,6 +32,7 @@ public class FileUploadController {
 
     /**
      * 現在表示可能な画像の一覧を表示する画面を返却する
+     *
      * @param model
      * @return
      */
@@ -53,12 +55,13 @@ public class FileUploadController {
 
     /**
      * ファイルアップロード処理を行う
-     * @param fileUploadForm アップロードされた画像
+     *
+     * @param fileData uploadファイルデータ
      * @param model 表示に必要なデータモデル
      * @return 画面表示
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String upload(FIleUploadForm fileUploadForm, Model model) {
+    public String upload(@RequestParam MultipartFile fileData, Model model) {
         log.debug("ファイルアップロード");
 
         //TODO formで受け取ったfileをS3へ

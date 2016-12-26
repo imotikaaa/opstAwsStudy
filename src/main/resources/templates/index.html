@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title></title>
     <meta charset="utf-8"/>
@@ -33,8 +33,8 @@
                     <h2>クラウド育成最終課題</h2>
                     <p>
                         画像アップローダー<br/>
-                    <form id="dataForm" enctype="multipart/form-data" method="post" th:action="@{/upload}">
-                        <input type="file" name="upload_file"/><input type="submit"/>
+                    <form id="dataForm" action="#" enctype="multipart/form-data" method="post" th:action="@{/upload}" th:object="${fileUploadForm}">
+                        <input type="file" name="fileData" th:field="*{fileData}" /><input type="submit"/>
                     </form>
                     </p>
                 </div>

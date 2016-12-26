@@ -21,6 +21,8 @@
 
 ### eclipseの場合
 
+- lombokのインストールを行う
+    - http://web-dev.hatenablog.com/entry/eclipse/lombok
 - project import で多分gradleプロジェクトインポートできる・・・はず・・・
     - all in one 4.4(以下プラグイン設定済みの状態で) でgradleプロジェクトインポートで行けたと報告ありました
 - 実行タスク「bootrun」で、アプリを実行する。topページが表示されれば設定完了

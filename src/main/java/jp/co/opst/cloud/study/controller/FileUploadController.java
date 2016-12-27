@@ -3,6 +3,7 @@ package jp.co.opst.cloud.study.controller;
 
 import jp.co.opst.cloud.study.domain.helper.DisplayHostHelper;
 import jp.co.opst.cloud.study.domain.model.dto.Image;
+import jp.co.opst.cloud.study.domain.model.form.FileUploadForm;
 import jp.co.opst.cloud.study.domain.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +50,7 @@ public class FileUploadController {
         //画面設定
         model.addAttribute("images", images);
         model.addAttribute("dispIp", displayHostHelper.createIp());
+        model.addAttribute("fileUploadForm", new FileUploadForm());
         return "index";
     }
 
